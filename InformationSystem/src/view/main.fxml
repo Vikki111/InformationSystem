@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
+    <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="64.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="btnAddLink" onAction="#showAddDialog" mnemonicParsing="false" text="Добавить" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnChangeLink" onAction="#showEditDialog" mnemonicParsing="false" text="Изменить" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnDeleteLink" onAction="#delete" mnemonicParsing="false" text="Удалить" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <TextField fx:id="filterText" prefHeight="25.0" prefWidth="180.0" promptText="Поиск">
+                           <HBox.margin>
+                              <Insets left="80.0" top="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <AnchorPane layoutY="76.0" prefHeight="236.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="table" layoutY="12.0" prefHeight="194.0" prefWidth="560.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="columnGenre" prefWidth="75.0" text="Жанр" />
+                              <TableColumn fx:id="columnTrackName" prefWidth="75.0" text="Название трека" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="277.0" prefHeight="83.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="btnClose" onAction="#closeStage" layoutX="512.0" layoutY="18.0" mnemonicParsing="false" text="Выход" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="37.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>
